@@ -1,4 +1,5 @@
 import './App.css'
+import ArtProvider from '../context/ArtProvider'
 
 function App() {
 
