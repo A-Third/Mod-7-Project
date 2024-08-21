@@ -14,14 +14,14 @@ This application will use the [name of API] API. Below are the documentation and
 - Link to API documentation: (https://api.artic.edu/api/v1/artworks)
 
 - https://api.artic.edu/api/v1/artworks
-  - Description of endpoint
+    - This will fetch an array of artwork objects
       - Id
       - Title
       - Image_id
 
 
 - https://api.artic.edu/api/v1/artworks/{id}
-  - Description of endpoint
+    - This will fetch a single artwork object
     - Id
     - Title
     - Short_description
@@ -32,9 +32,7 @@ This application will use the [name of API] API. Below are the documentation and
 
 - https://api.artic.edu/api/v1/artworks/search?q={query}
   - This will fetch a list of artworks that relate to the search query
-    - id 
     - Title
-    - image_id
 
 
 ## 👩‍💻 MVP User Stories & Frontend Routes
@@ -52,7 +50,7 @@ The application will feature the following frontend routes and core features:
 If time permits, the following stretch features will be implemented in order of priority:
 
 - Users will be able to search based on
-    - Title
+    - id
     - image_id
 - Users will be able to scroll through the paintings horizontally 
 - Users will be able to favorite their paintings. 
@@ -65,22 +63,53 @@ If time permits, the following stretch features will be implemented in order of 
 To ensure that we can complete all core features of the application in 1 week, we will aim to complete tasks according to the following timeline:
 
 **Day 1** Wednesday
+- [ ] Create file made by Vite - React for this project 
 - [ ] Able to generate a page of artwork
+  - [ ] Create a component folder
+  - [ ] Create ArtWork page
+  - [ ] Made a fetch to get multiple resources
+  - [ ] Used the `useState` hook 
+  - [ ] Used the `useEffect` hook 
+
 - [ ] Artworks can be seen on page
+  - [ ] Passed the artWork Page to be seen in App.jsx
 
 
 **Day 2** Thursday
-- [ ] Create the form 
-- [ ] Like the artwork: features 
-
+- [ ] Create a button to give details about a specific painting in another page; 
+- [ ] Made a fetch to get a single specific resource
+  - [ ] Id
+  - [ ] Title
+  - [ ] Short_description
+  - [ ] Medium_display
+  - [ ] Place_of_origin
+  - [ ] image_id
+- [ ] Used the 'useState' hook
+- [ ] Used the `useEffect` hook
 
 **Day 3** (MVP due by the end of the day) Friday
-- [ ] Form causes the update of the artwork
-- [ ] Like the artwork: features 
+- [ ] Create a form 
+- [ ] Used the 'useState' hook
+- [ ] Used the `useEffect` hook
+- [ ] Form takes you to a new generate page of artworks based on the search request: (currently just title)
 
 
 **Day 4** Monday
+- [ ] Begin creating any features possible
+  - [ ] search based on
+    - id
+    - image_id
+
 - [ ] Style the page
+  - [ ] Navigation bar fits cleanly on mobile and desktop
+  - [ ] Navigation visually indicates what page you are on
+  - [ ] Scroll through the paintings horizontally 
+  - [ ] Site has a primary color
+  - [ ] Site has a secondary color
+  - [ ] Site has an accent color
+    - This is for things like buttons, links, etc.
+  - [ ] Buttons have altered visual states for hover, active, and focus
+  - [ ] Links have altered visual states for hover, active, and focus
 
 **Day 5** Friday
 - [ ] Create presentation and demo video
