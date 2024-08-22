@@ -13,7 +13,7 @@ const ArtProvider = ({ children }) => {
   useEffect(() => {
     const doFetch = async () => {
       const [data, error] = await handleFetch(url);
-      if (data) setArtData(data);
+      if (data) setArtData(data.data);
       if (error) setError(error);
     };
     doFetch()
