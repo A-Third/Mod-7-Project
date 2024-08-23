@@ -11,7 +11,7 @@ function ArtSearch() {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    const [data, error] = await handleFetch(`https://api.artic.edu/api/v1/artworks/search?q=${inputValue}`);
+    const [data, error] = await handleFetch(`https://api.artic.edu/api/v1/artworks/search?q=${inputValue}&fields=id,title,image_id`);
     if (data) setSearchData(data.data);
     if (error) console.error(error);
   }
