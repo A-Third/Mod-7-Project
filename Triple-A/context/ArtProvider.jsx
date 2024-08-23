@@ -7,6 +7,8 @@ const url = `https://api.artic.edu/api/v1/artworks`
 
 const ArtProvider = ({ children }) => {
   const [artData, setArtData] = useState([])
+  const [searchData, setSearchData] = useState([]);
+
   const [wrong, setError] = useState()
 
 
@@ -20,8 +22,11 @@ const ArtProvider = ({ children }) => {
   }, [])
 
   const value = {
-    artData
-  }
+    artData,
+    searchData,
+    setSearchData
+  };
+
 
   return (
     <ArtContext.Provider value={value}>

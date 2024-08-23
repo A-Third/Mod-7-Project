@@ -1,11 +1,12 @@
 import './App.css'
 import ArtContainer from '../pages/ArtContainer'
+import ArtSearch from '../components/ArtSearch'
 
 function App() {
 
   return (
     <>
-      <h1>Hello</h1>
+      <ArtSearch />
       <ArtContainer />
     </>
   )
