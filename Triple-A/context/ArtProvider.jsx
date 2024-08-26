@@ -21,7 +21,7 @@ const ArtProvider = ({ children }) => {
     doFetch()
   }, [])
 
-  console.log(artData)
+  // console.log(artData)
   const value = {
     artData,
     searchData,

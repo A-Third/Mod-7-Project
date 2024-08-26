@@ -5,7 +5,7 @@ import ArtContext from "../context/ArtContext";
 
 function ArtSearch() {
   const { searchData, setSearchData } = useContext(ArtContext);
-  console.log('TEST: ', searchData)
+  // console.log('TEST: ', searchData)
 
   const [inputValue, setInputValue] = useState('')
 
