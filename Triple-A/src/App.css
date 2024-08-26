@@ -41,9 +41,22 @@
   height: auto;
 }
 
+.dashboard {
+  padding-top: 100px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100vw;
+}
 
+.title {
+  display: flex;
+  justify-content: center;
+}
 
 form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   max-width: 600px;
   margin: 0 auto;
   padding: 15px;
@@ -51,11 +64,9 @@ form {
   border-radius: 8px;
   background-color: #f9f9f9;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  /* Add subtle shadow for depth */
 }
 
 label {
-  display: block;
   font-size: large;
   margin-bottom: 10px;
   color: #333;
@@ -71,20 +82,27 @@ label {
   font-size: medium;
 }
 
+button:hover {
+  background-color: #61b372;
+  /* font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; */
+}
+
 button {
+  display: inline-block;
   color: black;
   font-size: medium;
   transition: background-color 0.3s ease;
-  /* Smooth transition for hover effect */
+  border-radius: 8px;
+  border: solid;
+  padding: 0.6em 1.2em;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  text-align: center;
 }
 
-button:hover {
-  background-color: #61b372;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 
 li {
   list-style: none;
@@ -92,26 +110,6 @@ li {
   padding: 0;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-
-button:hover {
-  border-color: #646cff;
-}
-
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
 
 @media (prefers-color-scheme: light) {
   :root {
