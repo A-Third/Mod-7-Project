@@ -1,7 +1,7 @@
 import './App.css'
 
 import ArtProvider from '../context/ArtProvider'
-import {Routes, Route, Link} from "react-router-dom"
+import { Routes, Route, Link } from "react-router-dom"
 import Dashboard from '../pages/Dashboard'
 import About from '../pages/About'
 import Contact from '../pages/Contact'
