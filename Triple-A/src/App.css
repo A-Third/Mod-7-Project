@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
 }
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -9,20 +10,99 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
+}
 
-  font-synthesis: none;
+.artworks {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  /* Creates responsive grid columns */
+  gap: 16px;
+}
+
+.artLi {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 16px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.artLi h1 {
+  font-size: 1.2em;
+  margin-bottom: 8px;
+}
+
+.artLi img {
+  max-width: 100%;
+  height: auto;
+}
+
+.dashboard {
+  padding-top: 100px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100vw;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  font-size: large;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.input-field {
+  width: 100%;
+  padding: 9px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+  font-size: medium;
+}
+
+button:hover {
+  background-color: #61b372;
+  /* font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale; */
 }
 
-#pokemon-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  margin: 0;
-  padding:0;
-
+button {
+  display: inline-block;
+  color: black;
+  font-size: medium;
+  transition: background-color 0.3s ease;
+  border-radius: 8px;
+  border: solid;
+  padding: 0.6em 1.2em;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  text-align: center;
 }
+
 
 li {
   list-style: none;
@@ -30,57 +110,29 @@ li {
   padding: 0;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
 
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
   }
+
   a:hover {
     color: #747bff;
   }
+
   button {
     background-color: #f9f9f9;
   }
 }
 
-@media (min-width: 768px) {
-  #pokemon-list {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  }
-  h2::first-letter {
-    text-transform: capitalize;
-  }
-}
-
-h2::first-letter {
-  text-transform: capitalize;
-}
 
 .Nav {
   background-color: #333;
   padding: 10px 20px;
   position: fixed;
   top: 0;
-  width: 100%; 
+  width: 100%;
   z-index: 1000;
 }
 
@@ -89,10 +141,10 @@ h2::first-letter {
   margin: 0;
   padding: 0;
   display: flex;
-  align-items: center; 
-  justify-content: center; 
-  gap: 30px; 
-  position: relative; 
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  position: relative;
 }
 
 .NavUL h2 {
@@ -110,37 +162,36 @@ h2::first-letter {
 
 .NavLI a {
   text-decoration: none;
-  color: #fff; 
-  transition: color 0.3s ease; 
+  color: #fff;
+  transition: color 0.3s ease;
 }
 
 .NavLI a:hover {
-  color: lightsalmon; 
+  color: lightsalmon;
   text-decoration: underline;
 }
 
 .NavLI a:active {
-  color: orange; 
+  color: orange;
 }
 
-
 main {
-  margin: 0; 
+  margin: 0;
   padding-top: 60px;
   width: 100vw;
   display: flex;
-  justify-content: center; 
-  align-items: flex-start; 
+  justify-content: center;
+  align-items: flex-start;
   min-height: 100vh;
   background-color: brown
 }
 
 .about-heading {
-  font-size: 2rem; 
-  color: white; 
-  max-width: 800px; 
-  line-height: 1.5; 
-  margin: 20px 0 0; 
+  font-size: 2rem;
+  color: white;
+  max-width: 800px;
+  line-height: 1.5;
+  margin: 20px 0 0;
   text-align: center;
 }
 
@@ -149,23 +200,24 @@ main {
 }
 
 .location-heading {
-  font-size: 1.5rem; 
-  color: #333; 
+  font-size: 1.5rem;
+  color: #333;
   margin: 0 0 10px;
 }
 
 .location-address {
-  font-size: 1rem; 
-  color: #666; 
-  margin: 0; 
+  font-size: 1rem;
+  color: #666;
+  margin: 0;
 }
 
 @media (max-width: 768px) {
   .NavUL {
-      flex-direction: column;
-      align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
+
   main {
-    padding-top: 220px; 
+    padding-top: 220px;
   }
 }
