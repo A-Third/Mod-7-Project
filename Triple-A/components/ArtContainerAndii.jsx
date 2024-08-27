@@ -25,24 +25,25 @@ const ArtContainerAndii = () => {
 
   return (
     <>
-      <h1>Artwork Details</h1>
+      <h1 className='artDetails'>Artwork Details</h1>
       {artwork ? (
-        <div>
-          <button onClick={() => navigate('/')}>Go Home</button>
-          <p>ID: {artwork.id}</p>
-          <h2>Title: {artwork.title}</h2>
-          <h2>Artist: {artwork.artist_title}</h2>
+        <div className='searchedArt'>
+          {/* <p>ID: {artwork.id}</p> */}
+          <h2 className='searchedArtHeading'>Title: {artwork.title}</h2>
+          <h2 className='searchedArtHeading'>Artist: {artwork.artist_title}</h2>
           <p>Medium: {artwork.medium_display}</p>
           <p>Place of Origin: {artwork.place_of_origin}</p>
+          <p>Description: {artwork.description ? artwork.description.replaceAll('<p>', '').replaceAll('</p>', '').replaceAll('<em>', '').replaceAll('</em>', '').replaceAll('&quot;', '').replaceAll('<a href="', '').replaceAll('">', ' ').replaceAll('</a>', '').replaceAll('</p>\n', '') : 'No description available'}</p>
           <img
             style={{ width: 300 }}
             src={
-                artwork.image_id
+              artwork.image_id
                 ? `https://www.artic.edu/iiif/2/${artwork.image_id}/full/843,/0/default.jpg`
                 : "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
             }
             alt={artwork.title}
           />
+          <button className="artSearchedButton" onClick={() => navigate('/')}>Go Home</button>
         </div>
       ) : (
         <p>Loading...</p>
