@@ -14,7 +14,7 @@ function App() {
       <NavBar />
       <Routes>
         <Route path='' element={<Dashboard />} />
-        <Route path='/:id' element={<ArtContainerAndii />} />
+        <Route path='/art/:id' element={<ArtContainerAndii />} />
         <Route path='/about' element={<About />} />
         <Route path='/location' element={<Location />} />
         <Route path='*' element={<NotFound />} /> {/* maybe we remove this line b/c the art will on the Dashboard/Main Page */}

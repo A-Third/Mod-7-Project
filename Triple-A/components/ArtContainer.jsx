@@ -20,7 +20,7 @@ function ArtContainer() {
             <li key={artwork.id} className="artLi">
               <h1>{artwork.title}</h1>
               <img style={{ width: 300 }} src={artwork['image_id'] ? `https://www.artic.edu/iiif/2/${artwork.image_id}/full/843,/0/default.jpg` : "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"} alt="artworkPainting" />
-              <button onClick={() => navigate(`/${artwork.id}`)}>Click me for details</button>
+              <button onClick={() => navigate(`/art/${artwork.id}`)}>Click me for details</button>
             </li>
           ))
         }
