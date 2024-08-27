@@ -6,11 +6,9 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
-
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color:#213547;
+  background-color: #ffffff;
 }
 
 body {
@@ -91,6 +89,8 @@ label {
   box-sizing: border-box;
   margin-bottom: 15px;
   font-size: medium;
+  background-color:white;
+  color:black
 }
 
 button:hover {
@@ -109,7 +109,7 @@ button {
   border-radius: 8px;
   border: solid;
   padding: 0.6em 1.2em;
-  background-color: #1a1a1a;
+  background-color: #f9f9f9;
   cursor: pointer;
   text-align: center;
 }
@@ -143,7 +143,7 @@ li {
   padding: 10px 20px;
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 100vw;
   z-index: 1000;
 }
 
@@ -177,6 +177,10 @@ li {
   text-decoration: none;
   color: #fff;
   transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #747bff;
 }
 
 .NavLI a:hover {
