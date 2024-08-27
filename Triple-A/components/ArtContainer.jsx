@@ -5,7 +5,7 @@ import ArtContext from "../context/ArtContext"
 function ArtContainer() {
   const { artData } = useContext(ArtContext);
   const { searchData } = useContext(ArtContext)
-  // console.log('TEST: ', artData)
+  console.log('TEST: ', artData)
 
   const navigate = useNavigate()
   let data;
